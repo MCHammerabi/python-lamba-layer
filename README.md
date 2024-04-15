@@ -37,10 +37,10 @@ pip install -r requirements.txt --target aws-layer/python/lib/python3.12/site-pa
 Let it do its thing :)
 
 ### cd to aws-layer dir and zip
-Note: name zip file (cdsapi_layer.zip)
+Note: name zip file (layer.zip)
 ```
 cd aws-layer
-zip -r cdsapi_layer.zip python/lib/python3.12/site-packages/*
+zip -r layer.zip python/lib/python3.12/site-packages/*
 ```
 
 ### now publish your layer!
