@@ -31,6 +31,8 @@ Note: match up python version with python version in lambda
 ```
 mkdir -p aws-layer/python/lib/python3.12/site-packages
 pip install -r requirements.txt --target aws-layer/python/lib/python3.12/site-packages
+or
+pip install -r requirements.txt --target aws-layer/python/lib/python3.12/site-packages --no-deps
 ```
 Let it do its thing :)
 
