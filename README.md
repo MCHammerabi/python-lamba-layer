@@ -46,6 +46,15 @@ zip -r cdsapi_layer.zip python/lib/python3.12/site-packages/*
 aws lambda publish-layer-version --layer-name cdsapi_layer --zip-file fileb://cdsapi_layer.zip --compatible-runtimes python3.12 --compatible-architectures x86_64
 ```
 
+## conda installs
+```
+mkdir cfgrib
+cd cfgrib
+python -m venv cfgrib
+source ./cfgrib/bin/activate
+conda install -c conda-forge cfgrib
+```
+
 
 
 
