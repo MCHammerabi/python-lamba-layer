@@ -45,7 +45,7 @@ zip -r layer.zip python/lib/python3.12/site-packages/*
 
 ### now publish your layer!
 ```
-aws lambda publish-layer-version --layer-name cdsapi_layer --zip-file fileb://cdsapi_layer.zip --compatible-runtimes python3.12 --compatible-architectures x86_64
+aws lambda publish-layer-version --layer-name cdsapi_layer --zip-file fileb://layer.zip --compatible-runtimes python3.12 --compatible-architectures x86_64
 ```
 
 ## conda installs
