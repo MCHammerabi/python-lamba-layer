@@ -53,6 +53,20 @@ cd cfgrib
 python -m venv cfgrib
 source ./cfgrib/bin/activate
 conda install -c conda-forge cfgrib
+deactivate
+```
+### then create zip file
+```
+mkdir python
+cd python
+cp -r ../cfgrib/lib64/python3.12/site-packages/* .
+cd ..
+zip -r cfgrib_lambda_layer.zip python
+```
+
+### now publish your layer!
+```
+aws lambda publish-layer-version --layer-name cfgrib_layer_2 --zip-file fileb://cfgrib_lambda_layer.zip --compatible-runtimes python3.12 --compatible-architectures x86_64
 ```
 
 
